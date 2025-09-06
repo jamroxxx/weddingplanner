@@ -1,0 +1,244 @@
+/* ===== Modern Wedding Management — Theme CSS =====
+   Paste inside <style> ... </style> in Page HTML Header
+   Key color tokens are at the top for easy tuning.
+*/
+
+/* ----- Design tokens ----- */
+:root{
+  --bg: #fbfaf9;
+  --surface: #ffffff;
+  --muted: #9aa4ad;
+  --accent: #b66dff;        /* primary accent (soft violet/pink) */
+  --accent-2: #ff7aa2;      /* secondary accent (blush) */
+  --success: #37b24d;
+  --danger: #e03131;
+  --glass: rgba(255,255,255,0.7);
+  --shadow-1: 0 6px 18px rgba(24,32,40,0.06);
+  --shadow-2: 0 10px 30px rgba(24,32,40,0.08);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --max-width: 1200px;
+  --container-pad: 24px;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Playfair Display", serif;
+}
+
+/* ----- Base ----- */
+html,body {
+  height:100%;
+  margin:0;
+  font-family: var(--font-sans);
+  background: linear-gradient(180deg, var(--bg) 0%, #fff 100%);
+  color:#142026;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Container */
+.app-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--container-pad);
+}
+
+/* Headings */
+h1, .display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color:#112028;
+}
+h1 { font-size: 40px; margin: 8px 0 4px; letter-spacing: -0.02em; }
+h2 { font-size: 24px; margin: 12px 0; }
+.h-sm { font-size: 16px; color:var(--muted); }
+
+/* ----- Navbar ----- */
+#site-navbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  background: linear-gradient(90deg, rgba(182,109,255,0.08), rgba(255,122,162,0.03));
+  border-radius: 14px;
+  padding: 12px 18px;
+  box-shadow: var(--shadow-1);
+  margin-bottom: 18px;
+}
+#site-navbar .brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand .logo {
+  width:44px; height:44px; border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex; align-items:center; justify-content:center;
+  color:white; font-weight:700; box-shadow: 0 4px 14px rgba(182,109,255,0.22);
+}
+.brand .title { font-weight:700; font-size:18px; }
+
+/* Top actions */
+.nav-actions { display:flex; gap:10px; align-items:center; }
+
+/* ----- Buttons ----- */
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 14px; border-radius:10px;
+  border:0; cursor:pointer; font-weight:600;
+  box-shadow:none; transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn:focus { outline: 3px solid rgba(182,109,255,0.18); outline-offset:2px; }
+
+/* Primary */
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:white;
+  box-shadow: 0 8px 22px rgba(182,109,255,0.18);
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+/* Ghost / secondary */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(20,32,38,0.06);
+  color: #163241;
+}
+
+/* Small */
+.btn-sm { padding:7px 10px; border-radius:8px; font-size:14px; }
+
+/* ----- Cards ----- */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow-1);
+  border: 1px solid rgba(16,24,30,0.03);
+}
+.card-lg { padding:24px; border-radius:16px; box-shadow: var(--shadow-2); }
+
+/* Card header */
+.card .card-head {
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+  margin-bottom:12px;
+}
+.card .card-title { font-weight:700; font-size:16px; }
+.card .card-sub { color:var(--muted); font-size:13px }
+
+/* ----- Forms ----- */
+.input {
+  width:100%;
+  padding:10px 12px; border-radius:10px; border:1px solid rgba(16,24,30,0.06);
+  background: #fff; font-size:15px;
+  box-shadow: 0 2px 8px rgba(16,24,30,0.03) inset;
+  transition: box-shadow .12s, border-color .12s;
+}
+.input:focus { border-color: rgba(182,109,255,0.45); box-shadow: 0 8px 18px rgba(182,109,255,0.06); outline:none; }
+
+/* Label + helper */
+.field { margin-bottom:12px; }
+.field label { display:block; font-size:13px; color:#223; margin-bottom:6px; font-weight:600; }
+.field .hint { font-size:12px; color:var(--muted); margin-top:6px; }
+
+/* ----- Small UI bits ----- */
+.chip {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 10px; border-radius:999px; font-weight:600;
+  background: linear-gradient(90deg, rgba(182,109,255,0.08), rgba(255,122,162,0.04));
+  color: #3b2a4a; font-size:13px;
+}
+
+/* Tiny badges */
+.badge {
+  display:inline-block; padding:6px 8px; border-radius:8px; font-size:12px;
+  background: #f3f6f8; color: #123; font-weight:700;
+}
+
+/* ----- Gallery ----- */
+#photo-gallery {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+  gap:12px;
+  margin-top:8px;
+}
+.gallery-item {
+  position:relative; overflow:hidden; border-radius:12px;
+  background: linear-gradient(180deg, #fff, #fff); box-shadow: var(--shadow-1);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.gallery-item img {
+  width:100%; height:220px; object-fit:cover; display:block;
+  transition: transform .45s cubic-bezier(.2,.9,.25,1);
+}
+.gallery-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+.gallery-item:hover img { transform: scale(1.06); }
+
+/* overlay for actions */
+.gallery-item .meta {
+  position:absolute; left:12px; right:12px; bottom:12px;
+  display:flex; justify-content:space-between; align-items:center; gap:8px;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.18));
+  padding:8px 10px; border-radius:10px;
+}
+.gallery-item .meta button { background: rgba(0,0,0,0.45); color: white; border-radius:8px; padding:6px 8px; border:0; }
+
+/* selection checkbox pseudo */
+.gallery-item .select {
+  position:absolute; top:10px; left:10px;
+  width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,0.9); box-shadow: 0 6px 18px rgba(16,24,30,0.06);
+}
+
+/* ----- Lists & Timeline ----- */
+.event-list { display:flex; flex-direction:column; gap:10px; }
+.event-row {
+  display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:10px;
+  background: linear-gradient(180deg, rgba(240,246,248,0.6), rgba(255,255,255,0.6));
+  border:1px solid rgba(16,24,30,0.03);
+}
+.event-row .dot { width:12px; height:12px; border-radius:50%; background:var(--accent); margin-top:6px; }
+
+/* ----- Modals ----- */
+.modal {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), #fff);
+  border-radius:16px; padding:18px; box-shadow: 0 30px 60px rgba(20,30,40,0.18);
+  max-width:720px;
+}
+
+/* ----- Tables ----- */
+.table {
+  width:100%; border-collapse:collapse; background:transparent;
+}
+.table th, .table td {
+  padding:12px 10px; text-align:left; border-bottom:1px solid rgba(16,24,30,0.04);
+}
+.table th { font-size:13px; color:var(--muted); font-weight:700; }
+
+/* ----- Footer ----- */
+.site-footer {
+  margin-top:28px; padding:18px; border-radius:12px; background:transparent;
+  display:flex; justify-content:space-between; align-items:center; color:var(--muted);
+}
+
+/* ----- Utilities ----- */
+.row { display:flex; gap:12px; align-items:center; }
+.col { display:flex; flex-direction:column; gap:8px; }
+.flex-1 { flex:1; }
+
+/* Responsive tweaks */
+@media (max-width:880px){
+  h1 { font-size:28px; }
+  #site-navbar { flex-direction:column; align-items:flex-start; gap:8px; padding:14px; }
+  .gallery-item img { height:160px; }
+}
+
+/* Accessibility helpers */
+.sr-only { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+/* ----- Optional: themed utility classes ----- */
+.theme-muted { color: var(--muted); }
+.theme-accent { color: var(--accent); }
+.bg-soft { background: linear-gradient(180deg, rgba(182,109,255,0.04), rgba(255,122,162,0.02)); }
+
+/* ===== End of theme ===== */
