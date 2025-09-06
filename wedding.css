@@ -220,7 +220,7 @@ h2 { font-size: 24px; margin: 12px 0; }
   margin-top:28px; padding:18px; border-radius:12px; background:transparent;
   display:flex; justify-content:space-between; align-items:center; color:var(--muted);
 }
-
+ 
 /* ----- Utilities ----- */
 .row { display:flex; gap:12px; align-items:center; }
 .col { display:flex; flex-direction:column; gap:8px; }
