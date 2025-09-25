@@ -3,9 +3,9 @@
    Key color tokens are at the top for easy tuning.
 */
 
-/* ---- Design tokens --- */
+/* ---- Design tokens --- */ 
 :root{
-  --bg: #fbfaf9;
+  --bg: #fbfaf9; 
   --surface: #ffffff;
   --muted: #9aa4ad;
   --accent: #b66dff;        /* primary accent (soft violet/pink) */
