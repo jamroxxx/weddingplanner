@@ -1,0 +1,161 @@
+/* =======================================
+   Bubble.io Custom Design System
+   ======================================= */
+
+/* ---------- 1. Variables (Theme Tokens) ---------- */
+:root {
+  --color-primary: #2563eb;   /* Blue */
+  --color-primary-dark: #1e40af;
+  --color-secondary: #10b981; /* Emerald */
+  --color-accent: #f59e0b;    /* Amber */
+  --color-danger: #dc2626;    /* Red */
+  --color-success: #16a34a;   /* Green */
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-600: #4b5563;
+  --color-gray-900: #111827;
+
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-heading: 'Inter', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ---------- 2. Reset & Base Styles ---------- */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-900);
+}
+
+.bubble-element {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* Typography scale */
+h1, .Text.h1 { font-size: 2.25rem; font-weight: 700; }
+h2, .Text.h2 { font-size: 1.75rem; font-weight: 600; }
+h3, .Text.h3 { font-size: 1.5rem; font-weight: 600; }
+h4, .Text.h4 { font-size: 1.25rem; font-weight: 500; }
+p, .Text { font-size: 1rem; line-height: 1.6; }
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ---------- 3. Buttons ---------- */
+.Button, .bubble-element.Button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff !important;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: var(--shadow-sm);
+}
+.Button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+.Button:active {
+  transform: translateY(0);
+}
+
+/* Secondary button */
+.Button.secondary {
+  background-color: var(--color-secondary);
+}
+
+/* Danger button */
+.Button.danger {
+  background-color: var(--color-danger);
+}
+
+/* ---------- 4. Inputs & Forms ---------- */
+.Input, input, textarea, select {
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+.Input:focus, input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+/* ---------- 5. Cards & Groups ---------- */
+.Group, .bubble-element.Group {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- 6. Modals ---------- */
+.Modal, .bubble-element.Modal {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ---------- 7. Alerts ---------- */
+.alert {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.alert-success {
+  background: #dcfce7;
+  color: var(--color-success);
+}
+.alert-danger {
+  background: #fee2e2;
+  color: var(--color-danger);
+}
+.alert-warning {
+  background: #fef9c3;
+  color: var(--color-accent);
+}
+
+/* ---------- 8. Utility Classes ---------- */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.rounded { border-radius: var(--radius-md); }
+.shadow { box-shadow: var(--shadow-md); }
