@@ -264,3 +264,116 @@ input[type="submit"]:active {
 .Button.accent:hover {
   background: linear-gradient(135deg, #e5a94c, #f4c376) !important;
 }
+
+/* =======================================
+   Wedding Theme: Form Elements & Links
+   ======================================= */
+
+/* ---------- Dropdown (Select) ---------- */
+select, 
+.bubble-element.Select, 
+.Select, 
+.InputDropdown {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-color: #fff !important;
+  border: 1px solid #e6d5cf !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 2.5rem 0.75rem 1rem !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  color: #3d3d3d !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04) !important;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23c08497" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.9rem center !important;
+  background-size: 1rem !important;
+  transition: all 0.25s ease !important;
+}
+select:hover, 
+.Select:hover {
+  border-color: #c08497 !important;
+}
+select:focus {
+  outline: none !important;
+  border-color: #c08497 !important;
+  box-shadow: 0 0 0 3px rgba(192, 132, 151, 0.2) !important;
+}
+
+/* ---------- Links ---------- */
+a, 
+.bubble-element.Link, 
+.Text a {
+  color: #c08497 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: all 0.25s ease !important;
+}
+a:hover, 
+.bubble-element.Link:hover, 
+.Text a:hover {
+  color: #9a6377 !important;
+  text-decoration: underline !important;
+}
+
+/* ---------- Checkbox ---------- */
+input[type="checkbox"], 
+.bubble-element.Checkbox input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #c08497 !important;
+  border-radius: 6px !important;
+  background-color: #fff !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  transition: all 0.25s ease !important;
+}
+input[type="checkbox"]:checked {
+  background-color: #c08497 !important;
+  border-color: #c08497 !important;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 70% !important;
+}
+input[type="checkbox"]:hover {
+  border-color: #9a6377 !important;
+}
+
+/* ---------- Radio Buttons ---------- */
+input[type="radio"], 
+.bubble-element.Radio input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #c08497 !important;
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: all 0.25s ease !important;
+}
+input[type="radio"]:checked {
+  background-color: #c08497 !important;
+  border-color: #c08497 !important;
+  box-shadow: 0 0 0 3px rgba(192, 132, 151, 0.2) !important;
+}
+input[type="radio"]:hover {
+  border-color: #9a6377 !important;
+}
+
+/* ---------- Form Labels ---------- */
+label, 
+.bubble-element.Label, 
+.Text.label {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.95rem !important;
+  color: #3d3d3d !important;
+  margin-bottom: 0.4rem !important;
+  display: block !important;
+}
