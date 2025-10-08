@@ -1,40 +1,40 @@
 /* =======================================
-   Bubble.io Custom Design System
+   Bubble.io Wedding Design System
    ======================================= */
 
-/* ---------- 1. Variables (Theme Tokens) ---------- */
+/* ---------- 1. Theme Variables ---------- */
 :root {
-  --color-primary: #2563eb;   /* Blue */
-  --color-primary-dark: #1e40af;
-  --color-secondary: #10b981; /* Emerald */
-  --color-accent: #f59e0b;    /* Amber */
-  --color-danger: #dc2626;    /* Red */
-  --color-success: #16a34a;   /* Green */
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-600: #4b5563;
-  --color-gray-900: #111827;
+  --color-primary: #c08497;      /* Blush rose */
+  --color-primary-dark: #9a6377; /* Deep rose */
+  --color-secondary: #a3b18a;    /* Sage green */
+  --color-accent: #f6bd60;       /* Soft gold */
+  --color-bg: #fffaf9;           /* Light ivory background */
+  --color-text: #3d3d3d;
+  --color-muted: #8c8c8c;
+  --color-border: #e6d5cf;
 
-  --font-family-base: 'Inter', sans-serif;
-  --font-family-heading: 'Inter', sans-serif;
+  --font-family-base: 'Playfair Display', serif;
+  --font-family-sans: 'Inter', sans-serif;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
 
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 2px 6px rgba(0,0,0,0.08);
-  --shadow-lg: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  --transition: all 0.25s ease-in-out;
 }
 
-/* ---------- 2. Reset & Base Styles ---------- */
-body, html {
+/* ---------- 2. Base Styles ---------- */
+html, body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family-base);
-  background-color: var(--color-gray-100);
-  color: var(--color-gray-900);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-sans);
+  line-height: 1.7;
 }
 
 .bubble-element {
@@ -42,36 +42,55 @@ body, html {
   font-family: inherit;
 }
 
-/* Typography scale */
-h1, .Text.h1 { font-size: 2.25rem; font-weight: 700; }
-h2, .Text.h2 { font-size: 1.75rem; font-weight: 600; }
-h3, .Text.h3 { font-size: 1.5rem; font-weight: 600; }
-h4, .Text.h4 { font-size: 1.25rem; font-weight: 500; }
-p, .Text { font-size: 1rem; line-height: 1.6; }
+/* Typography */
+h1, .Text.h1 {
+  font-family: var(--font-family-base);
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5em;
+}
+h2, .Text.h2 {
+  font-family: var(--font-family-base);
+  font-size: 1.75rem;
+  color: var(--color-primary-dark);
+}
+h3, .Text.h3 {
+  font-family: var(--font-family-base);
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+}
+p, .Text {
+  font-size: 1rem;
+  color: var(--color-text);
+}
 
 /* Links */
 a {
   color: var(--color-primary);
   text-decoration: none;
+  transition: var(--transition);
 }
-a:hover { text-decoration: underline; }
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
 
 /* ---------- 3. Buttons ---------- */
 .Button, .bubble-element.Button {
-  display: inline-block;
   background-color: var(--color-primary);
   color: #fff !important;
   border: none;
   border-radius: var(--radius-md);
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
+  font-family: var(--font-family-sans);
   box-shadow: var(--shadow-sm);
+  transition: var(--transition);
 }
 .Button:hover {
   background-color: var(--color-primary-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 .Button:active {
   transform: translateY(0);
@@ -82,40 +101,38 @@ a:hover { text-decoration: underline; }
   background-color: var(--color-secondary);
 }
 
-/* Danger button */
-.Button.danger {
-  background-color: var(--color-danger);
+/* Accent button */
+.Button.accent {
+  background-color: var(--color-accent);
 }
 
-/* ---------- 4. Inputs & Forms ---------- */
+/* ---------- 4. Inputs ---------- */
 .Input, input, textarea, select {
-  border: 1px solid var(--color-gray-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  padding: 0.65rem 0.75rem;
-  font-size: 1rem;
+  background-color: #fff;
+  padding: 0.75rem;
   width: 100%;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  transition: var(--transition);
 }
 .Input:focus, input:focus, textarea:focus, select:focus {
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(192, 132, 151, 0.2);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-/* Labels */
-label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-}
-
-/* ---------- 5. Cards & Groups ---------- */
+/* ---------- 5. Cards / Groups ---------- */
 .Group, .bubble-element.Group {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  padding: 1.25rem;
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+.Group:hover {
+  box-shadow: var(--shadow-lg);
 }
 
 /* ---------- 6. Modals ---------- */
@@ -130,32 +147,56 @@ label {
 
 /* ---------- 7. Alerts ---------- */
 .alert {
-  padding: 1rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 .alert-success {
-  background: #dcfce7;
-  color: var(--color-success);
+  background-color: #edf7ed;
+  color: #2e7d32;
 }
-.alert-danger {
-  background: #fee2e2;
-  color: var(--color-danger);
+.alert-error {
+  background-color: #fdecea;
+  color: #c62828;
 }
-.alert-warning {
-  background: #fef9c3;
-  color: var(--color-accent);
+.alert-info {
+  background-color: #e3f2fd;
+  color: #1565c0;
 }
 
 /* ---------- 8. Utility Classes ---------- */
 .text-center { text-align: center; }
 .text-right { text-align: right; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 1rem; }
-.mt-4 { margin-top: 1.5rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
 .p-2 { padding: 0.5rem; }
 .p-4 { padding: 1rem; }
 .rounded { border-radius: var(--radius-md); }
 .shadow { box-shadow: var(--shadow-md); }
+
+/* ---------- 9. Animations ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.6s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- 10. Decorative Elements ---------- */
+.divider {
+  height: 2px;
+  width: 60px;
+  background-color: var(--color-accent);
+  margin: 1.5rem auto;
+  border-radius: 4px;
+}
