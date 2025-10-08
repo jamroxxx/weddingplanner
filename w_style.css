@@ -377,3 +377,109 @@ label,
   margin-bottom: 0.4rem !important;
   display: block !important;
 }
+
+/* 🌸 Wedding Theme UI Additions */
+/* Elegant, modern, blush & gold palette */
+
+/* --- Inputs & Textareas --- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #f3d9d9;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: #5c4b4b;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #d9a7a7;
+  box-shadow: 0 0 0 3px rgba(217, 167, 167, 0.2);
+  outline: none;
+}
+
+/* --- Dropdown (select) --- */
+select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #f3d9d9;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: #5c4b4b;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23d9a7a7" height="16" width="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+select:focus {
+  border-color: #d9a7a7;
+  box-shadow: 0 0 0 3px rgba(217, 167, 167, 0.2);
+  outline: none;
+}
+
+/* --- Checkbox --- */
+input[type="checkbox"] {
+  accent-color: #d9a7a7;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+/* --- Radio Button --- */
+input[type="radio"] {
+  accent-color: #d9a7a7;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+/* --- Link --- */
+a {
+  color: #b88a8a;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #a06e6e;
+  text-decoration: underline;
+}
+
+/* --- Labels --- */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: #5c4b4b;
+}
+
+/* --- Field Wrapper --- */
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* --- Disabled State --- */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f9f5f5;
+  color: #a89696;
+  border-color: #ecdede;
+  cursor: not-allowed;
+}
