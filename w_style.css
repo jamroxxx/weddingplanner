@@ -200,3 +200,67 @@ a:hover {
   margin: 1.5rem auto;
   border-radius: 4px;
 }
+
+/* ---------- Buttons (strong overrides for Bubble) ---------- */
+.Button, 
+.bubble-element.Button,
+button.bubble-element,
+button, 
+input[type="button"],
+input[type="submit"] {
+  background: linear-gradient(135deg, #c08497, #dba8b8) !important; /* Blush gradient */
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 0.8rem 1.8rem !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.3px !important;
+  box-shadow: 0 4px 10px rgba(192, 132, 151, 0.25) !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease-in-out !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* Hover effect */
+.Button:hover,
+.bubble-element.Button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #b37287, #c7899d) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 14px rgba(192, 132, 151, 0.3) !important;
+}
+
+/* Active / pressed */
+.Button:active,
+.bubble-element.Button:active,
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  transform: translateY(0px) !important;
+  box-shadow: 0 3px 8px rgba(192, 132, 151, 0.25) !important;
+}
+
+/* Secondary button (sage green) */
+.Button.secondary {
+  background: linear-gradient(135deg, #a3b18a, #b7c59e) !important;
+  box-shadow: 0 4px 10px rgba(163, 177, 138, 0.25) !important;
+}
+.Button.secondary:hover {
+  background: linear-gradient(135deg, #8fa376, #a7b889) !important;
+}
+
+/* Accent (soft gold) */
+.Button.accent {
+  background: linear-gradient(135deg, #f6bd60, #f9d08b) !important;
+  box-shadow: 0 4px 10px rgba(246, 189, 96, 0.25) !important;
+}
+.Button.accent:hover {
+  background: linear-gradient(135deg, #e5a94c, #f4c376) !important;
+}
