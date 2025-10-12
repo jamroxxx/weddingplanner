@@ -194,15 +194,14 @@ input[type="submit"] {
   letter-spacing: 0.3px !important;
   box-shadow: 0 4px 10px rgba(192, 132, 151, 0.25) !important;
   cursor: pointer !important;
-  transition: all 0.25s ease-in-out !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
 }
 
-
 /* ---------- Animations ---------- */
+
 .fade-in {
   opacity: 0;
   transform: translateY(10px);
@@ -214,5 +213,5 @@ input[type="submit"] {
     transform: none;
   }
 }
-
+    
 </style>
