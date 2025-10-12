@@ -127,21 +127,56 @@ svg:hover path {
   fill: var(--color-primary-dark) !important;
 }
 
-/* ---------- 4. Inputs ---------- */
-.Input, input, textarea, select {
+/* --- Wedding Theme: Text Inputs --- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea {
+  background-color: #ffffff;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background-color: #fffaf9;
-  padding: 0.75rem;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: var(--color-text);
   width: 100%;
-  font-family: var(--font-family-sans);
-  font-size: 1rem;
-  transition: var(--transition);
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
+  box-shadow: none;
 }
-.Input:focus, input:focus, textarea:focus, select:focus {
+
+/* Subtle placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: #bfaeae;
+  opacity: 1;
+  font-style: italic;
+}
+
+/* Hover effect – gently lift border tone */
+input:hover,
+textarea:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(192, 132, 151, 0.2);
+}
+
+/* Focus state – soft blush glow */
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(184, 138, 138, 0.35);
   outline: none;
+  background-color: #fffdfd;
+}
+
+/* Disabled state */
+input:disabled,
+textarea:disabled {
+  background-color: #f8f4f4;
+  color: #a78f8f;
+  border-color: #e5d5d5;
+  cursor: not-allowed;
 }
 
 /* ---------- Buttons (strong overrides for Bubble) ---------- */
