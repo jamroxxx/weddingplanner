@@ -483,3 +483,49 @@ select:disabled {
   border-color: #ecdede;
   cursor: not-allowed;
 }
+
+/* --- Container Cleanup: Wedding Theme --- */
+
+/* Remove unwanted borders, frames, and shadows from groups and containers */
+div[class*="Group"],
+div[class*="container"],
+div[class*="box"],
+div[class*="bubble-element"] {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Bubble repeating groups and card-like containers */
+div[class*="RepeatingGroup"],
+div[class*="row"],
+div[class*="column"] {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Floating groups and popups */
+div[class*="FloatingGroup"],
+div[class*="Popup"] {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #fffaf9 !important; /* light wedding background */
+  border-radius: 16px !important; /* soft round edges */
+}
+
+/* Remove shadows and outlines from all inputs/buttons inside containers */
+input,
+button,
+textarea,
+select {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Optional: add gentle hover shadow for modern depth (if you want subtle motion) */
+div[class*="card"]:hover,
+div[class*="group"]:hover {
+  box-shadow: 0 3px 10px rgba(217, 167, 167, 0.08) !important;
+  transition: box-shadow 0.3s ease;
+}
