@@ -529,3 +529,70 @@ div[class*="group"]:hover {
   box-shadow: 0 3px 10px rgba(217, 167, 167, 0.08) !important;
   transition: box-shadow 0.3s ease;
 }
+/* --- Icon Cleanup: Wedding Theme --- */
+
+/* Remove background, shadow, and borders from all icons */
+svg,
+i,
+.bubble-icon,
+.bubble-element.Icon,
+div[class*="icon"],
+div[class*="Icon"] {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Ensure icons use your wedding color palette */
+svg path,
+.bubble-icon path {
+  fill: #b88a8a !important; /* elegant blush-gold tone */
+  transition: fill 0.3s ease;
+}
+
+svg:hover path,
+.bubble-icon:hover path {
+  fill: #a06e6e !important; /* slightly darker on hover */
+}
+
+/* For icons inside buttons */
+button svg,
+button i {
+  background: none !important;
+  border: none !important;
+  fill: #fff !important; /* keep contrast for wedding buttons */
+}
+
+/* Optional: normalize alignment */
+.bubble-icon,
+svg {
+  vertical-align: middle;
+}
+
+/* --- Pure Icons: Wedding Theme --- */
+/* --- Icon Reset: Remove All Custom Styling --- */
+
+.bubble-icon,
+.bubble-element.Icon,
+div[class*="icon"],
+div[class*="Icon"],
+svg,
+i {
+  all: unset !important;
+  display: inline-block !important;
+}
+
+/* Ensure icons remain visible (Bubble handles their internal SVG styles) */
+svg,
+.bubble-icon,
+i {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
+}
