@@ -3,13 +3,29 @@
    Wedding Theme – Bubble.io Design System
    ============================================ */
 
-/* --- Color Palette --- */
+/* ---------- 1. Theme Variables ---------- */
 :root {
-  --color-primary: #b88a8a;
-  --color-primary-dark: #a06e6e;
-  --color-bg: #fffaf9;
-  --color-border: #e8d8d8;
-  --color-text: #4f3a3a;
+  --color-primary: #c08497;      /* Blush rose */
+  --color-primary-dark: #9a6377; /* Deep rose */
+  --color-secondary: #a3b18a;    /* Sage green */
+  --color-accent: #f6bd60;       /* Soft gold */
+  --color-bg: #fffaf9;           /* Light ivory background */
+  --color-text: #3d3d3d;
+  --color-muted: #8c8c8c;
+  --color-border: #e6d5cf;
+
+  --font-family-base: 'Playfair Display', serif;
+  --font-family-sans: 'Inter', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  --transition: all 0.25s ease-in-out;
 }
 
 /* --- Base Typography --- */
