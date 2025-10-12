@@ -127,27 +127,20 @@ svg:hover path {
   fill: var(--color-primary-dark) !important;
 }
 
-/* --- Inputs & Textareas --- */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-textarea {
+/* ---------- 4. Inputs ---------- */
+.Input, input, textarea, select {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #fffaf9;
+  padding: 0.75rem;
   width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #f3d9d9;
-  border-radius: 8px;
-  background-color: #fff;
-  font-family: "Playfair Display", serif;
-  font-size: 15px;
-  color: #5c4b4b;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  transition: var(--transition);
 }
-
-input:focus,
-textarea:focus {
-  border-color: #d9a7a7;
-  box-shadow: 0 0 0 3px rgba(217, 167, 167, 0.2);
+.Input:focus, input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(192, 132, 151, 0.2);
   outline: none;
 }
 
