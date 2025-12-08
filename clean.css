@@ -241,7 +241,7 @@ div[class*="Group"]:hover {
 .bubble-element.RepeatingGroup .bubble-element {
   border: none !important;
 }
-
+/*
 .bubble-element.RepeatingGroup .RepeatingGroup,
 .bubble-element.RepeatingGroup .Row,
 div[class*="RepeatingGroup"] .bubble-rg-cell {
@@ -250,3 +250,4 @@ div[class*="RepeatingGroup"] .bubble-rg-cell {
   padding: 10px !important;
   background-color: #ffffff !important;
 }
+*/
