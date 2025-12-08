@@ -210,9 +210,9 @@ input[type="submit"] {
 
 /* --------- Wedding Theme: Card / Frame Borders ---------- */
 
-/* .bubble-element.Group, */
+/* .bubble-element.Group,
 .bubble-element.FloatingGroup,
-/*.bubble-element.RepeatingGroup,*/
+.bubble-element.RepeatingGroup,
 .bubble-element.Container,
 div[class*="group"],
 div[class*="Group"],
@@ -226,6 +226,7 @@ div[class*="box"] {
   padding: 12px !important;
   transition: var(--transition) !important;
 }
+*/
 
 /* Hover effect for cards */
 .bubble-element.Group:hover,
