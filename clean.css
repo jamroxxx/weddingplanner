@@ -209,6 +209,7 @@ input[type="submit"] {
 }
 
 /* --------- Wedding Theme: Card / Frame Borders ---------- */
+/*
 .bubble-element.Group,
 .bubble-element.FloatingGroup,
 .bubble-element.RepeatingGroup,
@@ -225,6 +226,7 @@ div[class*="box"] {
   padding: 12px !important;
   transition: var(--transition) !important;
 }
+*/
 
 /* Hover effect for cards */
 .bubble-element.Group:hover,
