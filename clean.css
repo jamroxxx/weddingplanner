@@ -1,4 +1,3 @@
-<style>
 /* ============================================
    Wedding Theme – Bubble.io Design System
    ============================================ */
@@ -211,10 +210,9 @@ input[type="submit"] {
 
 /* --------- Wedding Theme: Card / Frame Borders ---------- */
 
-/*.bubble-element.Group, 
+.bubble-element.Group, 
 .bubble-element.FloatingGroup,
 .bubble-element.RepeatingGroup,
-*/
 .bubble-element.Container,
 /div[class*="group"],
 div[class*="Group"],
@@ -237,7 +235,7 @@ div[class*="Group"]:hover {
   box-shadow: var(--shadow-md) !important;
 }
 
-/* RepeatingGroup Cell Borders
+/* RepeatingGroup Cell Borders */
 .bubble-element.RepeatingGroup .bubble-element {
   border: none !important;
 }
@@ -250,6 +248,3 @@ div[class*="RepeatingGroup"] .bubble-rg-cell {
   padding: 10px !important;
   background-color: #ffffff !important;
 }
-*/
-
-</style>
