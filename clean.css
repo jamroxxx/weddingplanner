@@ -213,10 +213,11 @@ input[type="submit"] {
 .bubble-element.Group,
 .bubble-element.FloatingGroup,
 .bubble-element.RepeatingGroup,
+*/
 .bubble-element.Container,
-div[class*="group"],
+/*div[class*="group"],
 div[class*="Group"],
-div[class*="FloatingGroup"],
+div[class*="FloatingGroup"],*/
 div[class*="container"],
 div[class*="box"] {
   border: 1px solid var(--color-border) !important;
@@ -228,19 +229,19 @@ div[class*="box"] {
 }
 */
 
-/* Hover effect for cards */
+/* Hover effect for cards
 .bubble-element.Group:hover,
 .bubble-element.FloatingGroup:hover,
 div[class*="Group"]:hover {
   border-color: var(--color-primary) !important;
   box-shadow: var(--shadow-md) !important;
 }
-
+*/
 /* RepeatingGroup Cell Borders */
 .bubble-element.RepeatingGroup .bubble-element {
   border: none !important;
 }
-/*
+
 .bubble-element.RepeatingGroup .RepeatingGroup,
 .bubble-element.RepeatingGroup .Row,
 div[class*="RepeatingGroup"] .bubble-rg-cell {
@@ -249,4 +250,3 @@ div[class*="RepeatingGroup"] .bubble-rg-cell {
   padding: 10px !important;
   background-color: #ffffff !important;
 }
-*/
