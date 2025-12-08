@@ -212,7 +212,7 @@ input[type="submit"] {
 
 /* .bubble-element.Group, */
 .bubble-element.FloatingGroup,
-.bubble-element.RepeatingGroup,
+/*.bubble-element.RepeatingGroup,*/
 .bubble-element.Container,
 div[class*="group"],
 div[class*="Group"],
