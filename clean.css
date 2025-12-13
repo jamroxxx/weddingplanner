@@ -208,46 +208,54 @@ input[type="submit"] {
   }
 }
 
+/* ---- blz Test --- */
+.bubble-element.clickable-element {
+  border: 1px solid var(--color-border) !important;
+}
+
+draggableui-DroppableGroup {
+  border: 1px solid var(--color-border) !important;
+}
+
+/* ----------  blz Test END ---------- */
+
 /* --------- Wedding Theme: Card / Frame Borders ---------- */
-/*
+
 .bubble-element.Group,
 .bubble-element.FloatingGroup,
 .bubble-element.RepeatingGroup,
-*/
 .bubble-element.Container,
-/*div[class*="group"],
+div[class*="group"],
 div[class*="Group"],
-div[class*="FloatingGroup"],*/
+div[class*="FloatingGroup"],
 div[class*="container"],
 div[class*="box"] {
-  border: 1px solid var(--color-border) !important;
+  border: 0px solid var(--color-border) !important;
   background-color: #ffffff !important;
   border-radius: var(--radius-md) !important;
   box-shadow: var(--shadow-sm) !important;
-  padding: 12px !important;
+  padding: 0px !important;
   transition: var(--transition) !important;
 }
-*/
 
-/* Hover effect for cards
+/* Hover effect for cards */
 .bubble-element.Group:hover,
 .bubble-element.FloatingGroup:hover,
 div[class*="Group"]:hover {
   border-color: var(--color-primary) !important;
   box-shadow: var(--shadow-md) !important;
 }
-*/
+
 /* RepeatingGroup Cell Borders */
 .bubble-element.RepeatingGroup .bubble-element {
   border: none !important;
 }
-/*
+
 .bubble-element.RepeatingGroup .RepeatingGroup,
 .bubble-element.RepeatingGroup .Row,
 div[class*="RepeatingGroup"] .bubble-rg-cell {
-  border: 1px solid var(--color-border) !important;
+  border: 0px solid var(--color-border) !important;
   border-radius: var(--radius-sm) !important;
-  padding: 10px !important;
+  padding: 0px !important;
   background-color: #ffffff !important;
 }
-*/
