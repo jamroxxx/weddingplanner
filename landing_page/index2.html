@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Wedding Planner – Aplikacja do planowania wesela</title>
+
+  <meta name="description" content="Wedding Planner to nowoczesna aplikacja SaaS do planowania wesela. Jedna platforma dla Pary Młodej i Wedding Plannera: zadania, budżet, harmonogram i współpraca w czasie rzeczywistym.">
+  <meta name="keywords" content="aplikacja do planowania wesela, wedding planner app, planer weselny online, organizacja wesela SaaS">
+  <meta name="author" content="Wedding Planner">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: #fffdfc; color: #2c2c2c; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .script { font-family: 'Great Vibes', cursive; }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #d8aab7, #c78a9e);
+      color: white;
+      border-radius: 9999px;
+      padding: 0.9rem 2.4rem;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    blockquote {
+      border-left: 4px solid #d8aab7;
+      padding-left: 1rem;
+      font-style: italic;
+      margin: 2rem auto;
+      max-width: 650px;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+<!-- Nawigacja -->
+<nav class="fixed w-full bg-white bg-opacity-80 backdrop-blur-md z-30">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <div class="script text-3xl">Wedding Planner</div>
+    <ul class="hidden md:flex space-x-8 font-medium">
+      <li><a href="#onas">Dlaczego my?</a></li>
+      <li><a href="#dla-kogo">Dla kogo?</a></li>
+      <li><a href="#funkcje">Funkcje</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero"
+  class="h-screen bg-cover bg-center relative"
+  style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=2000&q=80');">
+
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <div class="container mx-auto h-full flex flex-col justify-center items-center text-center px-6 relative z-10">
+    <h1 class="text-5xl md:text-6xl text-white fade-in">
+      Zaplanujcie wesele razem
+    </h1>
+
+    <p class="mt-6 text-lg md:text-xl text-gray-100 max-w-2xl fade-in delay-200">
+      Jedna aplikacja dla Pary Młodej i Wedding Plannera.
+      Zadania, budżet, harmonogram i komunikacja — bez chaosu, bez arkuszy.
+    </p>
+
+    <a href="#kontakt" class="btn-primary mt-10 fade-in delay-400 inline-block">
+      Rozpocznij planowanie
+    </a>
+  </div>
+</section>
+
+<!-- DLACZEGO MY -->
+<section id="onas" class="pt-24 pb-16">
+  <h2 class="text-4xl text-center mb-6">Planowanie wesela. W końcu proste.</h2>
+  <p class="mx-auto max-w-3xl text-center text-gray-700 leading-relaxed">
+    Wedding Planner to nowoczesna aplikacja SaaS, która porządkuje cały proces organizacji wesela.
+    Tworzymy jedno wspólne miejsce, w którym Para Młoda i Wedding Planner pracują razem —
+    na tych samych danych, w czasie rzeczywistym.
+  </p>
+</section>
+
+<!-- FUNKCJE -->
+<section id="funkcje" class="py-16 bg-gray-50">
+  <h2 class="text-4xl text-center mb-12">Co potrafi Wedding Planner?</h2>
+
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <h3 class="text-2xl mb-4">Zadania i harmonogram</h3>
+      <p class="text-gray-600">
+        Gotowe checklisty i elastyczny harmonogram, który prowadzi Was krok po kroku przez cały proces.
+      </p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <h3 class="text-2xl mb-4">Budżet pod kontrolą</h3>
+      <p class="text-gray-600">
+        Planowanie kosztów, płatności i umów w jednym miejscu — bez zgadywania i chaosu.
+      </p>
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <h3 class="text-2xl mb-4">Współpraca online</h3>
+      <p class="text-gray-600">
+        Para Młoda i Wedding Planner pracują razem — komentarze, zmiany i decyzje w czasie rzeczywistym.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DLA KOGO -->
+<section id="dla-kogo" class="py-16">
+  <h2 class="text-4xl text-center mb-10">Dla kogo jest aplikacja?</h2>
+
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6">
+
+    <div class="border p-8 rounded-xl">
+      <h3 class="text-2xl mb-3">Para Młoda</h3>
+      <p class="text-gray-600">
+        Organizujcie wesele bez stresu. Wszystkie ustalenia, terminy i koszty w jednym miejscu.
+      </p>
+    </div>
+
+    <div class="border p-8 rounded-xl">
+      <h3 class="text-2xl mb-3">Wedding Plannerzy</h3>
+      <p class="text-gray-600">
+        Zarządzajcie wieloma weselami jednocześnie. Lepsza komunikacja, mniej maili, więcej kontroli.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section id="opinie" class="py-16 bg-gray-50">
+  <h2 class="text-4xl text-center mb-8">Co mówią użytkownicy?</h2>
+
+  <blockquote>
+    „Pierwsza aplikacja, w której Para Młoda i planner naprawdę pracują razem.
+    Koniec z Excelem i setkami wiadomości.”
+    <br><span class="font-semibold">— Wedding Planner</span>
+  </blockquote>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="py-16">
+  <h2 class="text-4xl text-center mb-6">Zacznij korzystać</h2>
+  <p class="text-center mb-8 text-gray-600">
+    Dołącz do par i wedding plannerów, którzy planują wesele bez chaosu.
+  </p>
+
+  <div class="text-center">
+    <a href="#" class="btn-primary">Załóż konto</a>
+  </div>
+</section>
+
+<!-- STOPKA -->
+<footer class="py-10 bg-gray-100 text-center text-gray-600 text-sm">
+  © 2025 Wedding Planner ·
+  <a href="polityka-prywatnosci.html" class="underline">Polityka prywatności</a> ·
+  <a href="regulamin.html" class="underline">Regulamin</a>
+</footer>
+
+</body>
+</html>
