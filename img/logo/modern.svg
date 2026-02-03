@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100" fill="none">
+    <path d="M40 60C40 45 55 35 65 35C75 35 85 45 85 60C85 80 65 90 65 90C65 90 45 80 40 60Z" stroke="#D4AF37" stroke-width="3"/>
+    <circle cx="65" cy="25" r="4" fill="#D4AF37"/>
+    <text x="100" y="65" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#2C3E50"><tspan fill="#D4AF37">i</tspan>Wedding<tspan font-size="18" font-weight="normal" fill="#7F8C8D">.pl</tspan></text>
+    <text x="100" y="85" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#95A5A6">TW&#xD3;J PLANER &#x15A;LUBNY</text>
+</svg>
