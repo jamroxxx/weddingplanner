@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
-    <defs>
-        <style type="text/css">
+  <defs>
+    <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap');
       .logo-text {
         font-family: 'Great Vibes', cursive;
@@ -12,8 +12,8 @@
         fill: #c08497;
       }
     </style>
-    </defs>
-    <text x="65" y="75" class="logo-text"><tspan class="accent">i</tspan>Wedding
-  </text>
-    <rect x="70" y="85" width="230" height="0.5" fill="#c08497" opacity="0.5"/>
+  </defs>
+  <text x="65" y="75" class="logo-text"><tspan class="accent">i</tspan>Wedding.pl</text>
+  <rect x="70" y="85" width="230" height="0.5" fill="#c08497" opacity="0.5"/>
+  <text x="65" y="100" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#95A5A6">TW&#xD3;J PLANER &#x15A;LUBNY</text>
 </svg>
