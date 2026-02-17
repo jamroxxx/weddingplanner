@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /version-test/
+Disallow: /api/
+Sitemap: https://iwedding.pl/sitemap.xml

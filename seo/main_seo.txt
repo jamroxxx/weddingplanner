@@ -1,0 +1,11 @@
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="iwedding.pl">
+<meta property="og:title" content="iwedding.pl – Planowanie ślubu stało się proste">
+<meta property="og:description" content="Kompleksowe narzędzia dla Par Młodych i Wedding Plannerów w Polsce.">
+<meta property="og:image" content="https://iwedding.pl/twoja-grafika-og.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="iwedding.pl – Twój osobisty asystent ślubny">
+<meta name="twitter:description" content="Zarządzaj listą gości, budżetem i zadaniami z wedding plannerem w jednej aplikacji.">
+
+<meta name="author" content="LetsMakeAProcess">
