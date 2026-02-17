@@ -3,95 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najczęściej Zadawane Pytania - iwedding.pl</title>
     <style>
+        /* Stylistyka spójna z iwedding.pl */
         :root {
-            --primary: #c08497;
-            --secondary: #a3b18a;
-            --text: #3d3d3d;
-            --bg: #fffaf9;
+            --rose: #c08497;
+            --sage: #a3b18a;
+            --dark: #3d3d3d;
+            --cream: #fffaf9;
+            --white: #ffffff;
+            --border: #e6d5cf;
         }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); padding: 40px 20px; max-width: 850px; margin: 0 auto; }
-        h1 { font-family: 'Playfair Display', serif; text-align: center; color: var(--primary); font-size: 2.5em; margin-bottom: 40px; }
-        h2 { font-family: 'Playfair Display', serif; color: var(--secondary); border-bottom: 1px solid #e6d5cf; padding-bottom: 10px; margin-top: 50px; }
 
-        .faq-item { background: #fff; border: 1px solid #e6d5cf; border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
-        .faq-question { padding: 18px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
-        .faq-question:hover { background: #fdf2f0; }
-        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.5em; }
-        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s; font-size: 0.95em; color: #555; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 40px 20px;
+        }
 
-        /* Klasa aktywna dla JS (możesz dodać prosty workflow w Bubble) */
-        .faq-item.active .faq-answer { max-height: 500px; padding: 10px 25px 20px; }
-        .faq-item.active .faq-question::after { content: '-'; }
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-        .cta-section { text-align: center; margin-top: 60px; padding: 30px; background: #fdf2f0; border-radius: 16px; }
-        .btn { background: var(--primary); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 15px; }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--rose);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--sage);
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+
+        .faq-category {
+            margin-top: 40px;
+            font-family: 'Playfair Display', serif;
+            color: var(--rose);
+            font-size: 1.5em;
+            border-bottom: 2px solid var(--rose);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(192, 132, 151, 0.05);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(192, 132, 151, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '⌄';
+            color: var(--rose);
+            font-size: 1.8em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        /* Klasa aktywna */
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 25px 25px 25px;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .cta-box {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--white);
+            border: 2px dashed var(--rose);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .btn-contact {
+            background-color: var(--rose);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: #a66d7e;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Jak możemy Ci pomóc?</h1>
+<div class="faq-wrapper">
+    <h1>Często Zadawane Pytania</h1>
+    <p class="subtitle">Wszystko, co musisz wiedzieć o iwedding.pl</p>
 
-    <h2>Ogólne</h2>
+    <div class="faq-category">Ogólne</div>
+
     <div class="faq-item">
-        <div class="faq-question">Czym jest iwedding.pl?</div>
-        <div class="faq-answer">iwedding.pl to zaawansowana platforma SaaS, która łączy Pary Młode z profesjonalnymi Wedding Plannerami. Oferujemy kompleksowe narzędzia do zarządzania budżetem, listą gości i harmonogramem ślubnym w jednym, bezpiecznym miejscu.</div>
+        <div class="faq-question">Czy iwedding.pl jest płatne?</div>
+        <div class="faq-answer">Tak, iwedding.pl to platforma subskrypcyjna (SaaS). Opłaty pozwalają nam utrzymać najwyższą jakość narzędzi i bezpieczeństwo Twoich danych. Szczegóły znajdziesz w zakładce Cennik.</div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">Czy korzystanie z serwisu jest płatne?</div>
-        <div class="faq-answer">Tak, iwedding.pl jest platformą płatną. Oferujemy różne plany subskrypcyjne dostosowane do potrzeb – zarówno dla Par Młodych szukających narzędzi premium, jak i dla Wedding Plannerów budujących swoją markę. Aktualny cennik znajdziesz w zakładce "Cennik".</div>
-    </div>
-
-    <h2>Dla Par Młodych</h2>
-    <div class="faq-item">
-        <div class="faq-question">Jakie narzędzia otrzymam po zarejestrowaniu?</div>
-        <div class="faq-answer">Jako Para Młoda otrzymujecie dostęp do interaktywnego kalendarza ślubnego, kalkulatora budżetu, managera listy gości (z opcją RSVP online) oraz możliwości bezpośredniej współpracy z wybranym Wedding Plannerem wewnątrz platformy.</div>
-    </div>
+    <div class="faq-category">Pary & Plannerzy</div>
 
     <div class="faq-item">
-        <div class="faq-question">Czy mogę zaprosić swojego Wedding Plannera do aplikacji?</div>
-        <div class="faq-answer">Oczywiście! Jeśli Twój Planner nie ma jeszcze konta na iwedding.pl, możesz wysłać mu zaproszenie. Po rejestracji będziecie mogli wspólnie edytować listę zadań, akceptować oferty podwykonawców i wymieniać się dokumentami.</div>
-    </div>
-
-    <h2>Dla Wedding Plannerów</h2>
-    <div class="faq-item">
-        <div class="faq-question">Jak iwedding.pl pomaga w mojej pracy?</div>
-        <div class="faq-answer">Platforma służy jako Twoje centrum dowodzenia. Możesz zarządzać wieloma ślubami jednocześnie, udostępniać postępy prac klientom, zbierać opinie od Par Młodych i pozyskiwać nowe zlecenia dzięki profesjonalnemu profilowi w naszej bazie.</div>
+        <div class="faq-question">Jak działa współpraca na linii Para - Planner?</div>
+        <div class="faq-answer">To serce naszej platformy. Po połączeniu kont, obie strony widzą ten sam harmonogram, budżet i listę zadań. Zmiany wprowadzone przez jedną osobę są widoczne dla drugiej w czasie rzeczywistym.</div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">Jak rozliczane są płatności za subskrypcję?</div>
-        <div class="faq-answer">Subskrypcja dla Wedding Plannerów rozliczana jest miesięcznie lub rocznie. Faktury VAT wystawiane są automatycznie przez system LetsMakeAProcess i przesyłane na Twój adres e-mail.</div>
+        <div class="faq-question">Czy Planner może zarządzać wieloma ślubami?</div>
+        <div class="faq-answer">Oczywiście. Konto Wedding Plannera posiada dedykowany Dashboard, który pozwala na płynne przełączanie się między projektami różnych Par Młodych bez mieszania danych.</div>
     </div>
 
-    <h2>Bezpieczeństwo i Technologia</h2>
-    <div class="faq-item">
-        <div class="faq-question">Gdzie przechowywane są moje dane?</div>
-        <div class="faq-answer">Twoje dane są przechowywane w bezpiecznej chmurze (infrastruktura AWS), przy zachowaniu najwyższych standardów bezpieczeństwa i zgodnie z wymogami RODO. Stosujemy szyfrowanie SSL, aby chronić Twoją prywatność.</div>
+    <div class="cta-box">
+        <h3>Nadal masz wątpliwości?</h3>
+        <p>Nasz zespół wsparcia chętnie odpowie na każde Twoje pytanie dotyczące platformy.</p>
+        <a href="mailto:kontakt@iwedding.pl" class="btn-contact">Napisz do nas</a>
     </div>
+</div>
 
-    <div class="faq-item">
-        <div class="faq-question">Co się stanie z moimi danymi po ślubie?</div>
-        <div class="faq-answer">Po zakończonej uroczystości możesz zdecydować o usunięciu konta lub zachowaniu go w trybie archiwalnym, aby mieć dostęp do wspomnień i kontaktów do podwykonawców. Twoje dane pozostają Twoją własnością.</div>
-    </div>
-
-    <div class="cta-section">
-        <h3>Nie znalazłeś odpowiedzi na swoje pytanie?</h3>
-        <p>Napisz do nas, chętnie pomożemy Ci zaplanować Twój wielki dzień!</p>
-        <a href="mailto:[TWÓJ-EMAIL]" class="btn">Skontaktuj się z nami</a>
-    </div>
-
-    <script>
-        // Prosty skrypt do rozwijania FAQ (możesz go też zastąpić workflow w Bubble)
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                item.classList.toggle('active');
-            });
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
