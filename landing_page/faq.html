@@ -1,52 +1,97 @@
-<!-- FAQ -->
-<div class="container fade-in p-4 mt-3">
-    <div class="Group p-4">
-        <h2 style="font-family: var(--font-family-base);">
-            Najczęściej zadawane pytania (FAQ)
-        </h2>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najczęściej Zadawane Pytania - iwedding.pl</title>
+    <style>
+        :root {
+            --primary: #c08497;
+            --secondary: #a3b18a;
+            --text: #3d3d3d;
+            --bg: #fffaf9;
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); padding: 40px 20px; max-width: 850px; margin: 0 auto; }
+        h1 { font-family: 'Playfair Display', serif; text-align: center; color: var(--primary); font-size: 2.5em; margin-bottom: 40px; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--secondary); border-bottom: 1px solid #e6d5cf; padding-bottom: 10px; margin-top: 50px; }
 
-        <div class="Group p-4 mt-3">
-            <h3>Czy Wedding Planner jest darmowy?</h3>
-            <p>
-                Tak, założenie konta i korzystanie z podstawowych funkcji
-                Wedding Planner jest całkowicie darmowe. W przyszłości
-                mogą pojawić się opcjonalne funkcje premium.
-            </p>
-        </div>
+        .faq-item { background: #fff; border: 1px solid #e6d5cf; border-radius: 12px; margin-bottom: 15px; overflow: hidden; }
+        .faq-question { padding: 18px 25px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
+        .faq-question:hover { background: #fdf2f0; }
+        .faq-question::after { content: '+'; color: var(--primary); font-size: 1.5em; }
+        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s; font-size: 0.95em; color: #555; }
 
-        <div class="Group p-4 mt-3">
-            <h3>Dla kogo jest Wedding Planner?</h3>
-            <p>
-                Aplikacja została stworzona dla par planujących ślub i wesele,
-                niezależnie od skali wydarzenia – zarówno dla kameralnych uroczystości,
-                jak i dużych wesel.
-            </p>
-        </div>
+        /* Klasa aktywna dla JS (możesz dodać prosty workflow w Bubble) */
+        .faq-item.active .faq-answer { max-height: 500px; padding: 10px 25px 20px; }
+        .faq-item.active .faq-question::after { content: '-'; }
 
-        <div class="Group p-4 mt-3">
-            <h3>Czy mogę zaprosić inne osoby do współpracy?</h3>
-            <p>
-                Tak. Możecie zaprosić partnera, członków rodziny lub inne osoby,
-                aby wspólnie zarządzać przygotowaniami do ślubu.
-            </p>
-        </div>
+        .cta-section { text-align: center; margin-top: 60px; padding: 30px; background: #fdf2f0; border-radius: 16px; }
+        .btn { background: var(--primary); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 15px; }
+    </style>
+</head>
+<body>
 
-        <div class="Group p-4 mt-3">
-            <h3>Czy mogę korzystać z aplikacji na telefonie?</h3>
-            <p>
-                Tak, Wedding Planner działa w przeglądarce i jest przystosowany
-                do urządzeń mobilnych, dzięki czemu możecie planować ślub
-                z dowolnego miejsca.
-            </p>
-        </div>
+    <h1>Jak możemy Ci pomóc?</h1>
 
-        <div class="Group p-4 mt-3">
-            <h3>Czy moje dane są bezpieczne?</h3>
-            <p>
-                Tak. Dbamy o bezpieczeństwo danych osobowych i stosujemy
-                nowoczesne zabezpieczenia. Szczegóły znajdziecie
-                w <a href="/polityka-prywatnosci">Polityce Prywatności</a>.
-            </p>
-        </div>
+    <h2>Ogólne</h2>
+    <div class="faq-item">
+        <div class="faq-question">Czym jest iwedding.pl?</div>
+        <div class="faq-answer">iwedding.pl to zaawansowana platforma SaaS, która łączy Pary Młode z profesjonalnymi Wedding Plannerami. Oferujemy kompleksowe narzędzia do zarządzania budżetem, listą gości i harmonogramem ślubnym w jednym, bezpiecznym miejscu.</div>
     </div>
-</div>
+
+    <div class="faq-item">
+        <div class="faq-question">Czy korzystanie z serwisu jest płatne?</div>
+        <div class="faq-answer">Tak, iwedding.pl jest platformą płatną. Oferujemy różne plany subskrypcyjne dostosowane do potrzeb – zarówno dla Par Młodych szukających narzędzi premium, jak i dla Wedding Plannerów budujących swoją markę. Aktualny cennik znajdziesz w zakładce "Cennik".</div>
+    </div>
+
+    <h2>Dla Par Młodych</h2>
+    <div class="faq-item">
+        <div class="faq-question">Jakie narzędzia otrzymam po zarejestrowaniu?</div>
+        <div class="faq-answer">Jako Para Młoda otrzymujecie dostęp do interaktywnego kalendarza ślubnego, kalkulatora budżetu, managera listy gości (z opcją RSVP online) oraz możliwości bezpośredniej współpracy z wybranym Wedding Plannerem wewnątrz platformy.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Czy mogę zaprosić swojego Wedding Plannera do aplikacji?</div>
+        <div class="faq-answer">Oczywiście! Jeśli Twój Planner nie ma jeszcze konta na iwedding.pl, możesz wysłać mu zaproszenie. Po rejestracji będziecie mogli wspólnie edytować listę zadań, akceptować oferty podwykonawców i wymieniać się dokumentami.</div>
+    </div>
+
+    <h2>Dla Wedding Plannerów</h2>
+    <div class="faq-item">
+        <div class="faq-question">Jak iwedding.pl pomaga w mojej pracy?</div>
+        <div class="faq-answer">Platforma służy jako Twoje centrum dowodzenia. Możesz zarządzać wieloma ślubami jednocześnie, udostępniać postępy prac klientom, zbierać opinie od Par Młodych i pozyskiwać nowe zlecenia dzięki profesjonalnemu profilowi w naszej bazie.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Jak rozliczane są płatności za subskrypcję?</div>
+        <div class="faq-answer">Subskrypcja dla Wedding Plannerów rozliczana jest miesięcznie lub rocznie. Faktury VAT wystawiane są automatycznie przez system LetsMakeAProcess i przesyłane na Twój adres e-mail.</div>
+    </div>
+
+    <h2>Bezpieczeństwo i Technologia</h2>
+    <div class="faq-item">
+        <div class="faq-question">Gdzie przechowywane są moje dane?</div>
+        <div class="faq-answer">Twoje dane są przechowywane w bezpiecznej chmurze (infrastruktura AWS), przy zachowaniu najwyższych standardów bezpieczeństwa i zgodnie z wymogami RODO. Stosujemy szyfrowanie SSL, aby chronić Twoją prywatność.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Co się stanie z moimi danymi po ślubie?</div>
+        <div class="faq-answer">Po zakończonej uroczystości możesz zdecydować o usunięciu konta lub zachowaniu go w trybie archiwalnym, aby mieć dostęp do wspomnień i kontaktów do podwykonawców. Twoje dane pozostają Twoją własnością.</div>
+    </div>
+
+    <div class="cta-section">
+        <h3>Nie znalazłeś odpowiedzi na swoje pytanie?</h3>
+        <p>Napisz do nas, chętnie pomożemy Ci zaplanować Twój wielki dzień!</p>
+        <a href="mailto:[TWÓJ-EMAIL]" class="btn">Skontaktuj się z nami</a>
+    </div>
+
+    <script>
+        // Prosty skrypt do rozwijania FAQ (możesz go też zastąpić workflow w Bubble)
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
